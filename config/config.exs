@@ -4,7 +4,7 @@ use Mix.Config
 
 config :github_unfollowers, GithubUnfollowers.Repo,
   adapter: Ecto.Adapters.Postgres,
-  database: "ecto_simple",
+  database: "github_unfollowers",
   username: "postgres",
   password: "postgres"
 

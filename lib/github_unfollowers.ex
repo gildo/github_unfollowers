@@ -9,7 +9,9 @@ defmodule GithubUnfollowers do
     children = [
       # Define workers and child supervisors to be supervised
       # worker(GithubUnfollowers.Worker, [arg1, arg2, arg3]),
-      worker(__MODULE__, [], function: :run)
+      worker(__MODULE__, [], function: :run),
+      worker(GithubUnfollowers.Repo, [])
+
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html

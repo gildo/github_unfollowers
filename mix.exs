@@ -31,8 +31,8 @@ defmodule GithubUnfollowers.Mixfile do
     [{:cowboy, "~> 1.0.0"},
      {:plug, "~> 1.0"},
      {:tentacat, "~> 0.2"},
-     {:postgrex, ">= 0.0.0"},
-     {:ecto, "~> 1.0"}
+     {:postgrex, ">= 0.10.0"},
+     {:ecto, github: "elixir-lang/ecto"}
    ]
   end
 
