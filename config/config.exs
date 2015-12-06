@@ -2,7 +2,7 @@
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
-config :github_unfollowers, GithubUnfollowers.Repo,
+config :github_unfollowers, Repo,
   adapter: Ecto.Adapters.Postgres,
   database: "github_unfollowers",
   username: "postgres",

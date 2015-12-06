@@ -10,13 +10,13 @@ defmodule GithubUnfollowers do
       # Define workers and child supervisors to be supervised
       # worker(GithubUnfollowers.Worker, [arg1, arg2, arg3]),
       worker(__MODULE__, [], function: :run),
-      worker(GithubUnfollowers.Repo, [])
-
+      worker(Repo, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
     # for other strategies and supported options
     opts = [strategy: :one_for_one, name: GithubUnfollowers.Supervisor]
+    Tentacat.start
     Supervisor.start_link(children, opts)
   end
 
@@ -25,7 +25,7 @@ defmodule GithubUnfollowers do
   end
 end
 
-defmodule GithubUnfollowers.Repo do
+defmodule Repo do
   use Ecto.Repo,
     otp_app: :github_unfollowers
 end

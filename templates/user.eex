@@ -1,1 +1,4 @@
-User: <%= @user["name"] %>
+User: <%= @user.username %>
+<%= for follower <- @user.followers do %>
+  <p><%= follower.username %></p>
+<% end %>

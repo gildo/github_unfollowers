@@ -1,4 +1,4 @@
-defmodule GithubUnfollowers.Repo.Migrations.AddRelationsTable do
+defmodule Repo.Migrations.AddRelationsTable do
   use Ecto.Migration
 
   def up do
